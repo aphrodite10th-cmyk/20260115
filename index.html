@@ -81,3 +81,148 @@
             margin-bottom: 15px;
             text-align: justify;
         }
+
+        /* 重點列表樣式 */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* 強調文字 */
+        strong {
+            color: #000;
+            font-weight: 600;
+        }
+
+        /* 數據引語區塊 */
+        .highlight-box {
+            background-color: #f1f3f5;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #666;
+        }
+
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>是律師洩密或檢方浮濫偵辦？</h1>
+            <div class="subtitle">詐欺案海嘯下，檢辯雙方的洩密紅線之爭與司法困境</div>
+            <div class="meta">資料來源：報導者 The Reporter | 整理：AI 助理</div>
+        </header>
+
+        <main>
+            <section>
+                <p>全國詐騙案件頻傳，不僅造成民眾財產損失，更逐漸侵蝕司法體系的運作底線。近期檢方大動作偵辦律師洩密案，引發律師界強烈反彈與恐慌。檢辯雙方的信任危機，正衝擊著台灣的刑事訴訟制度。</p>
+            </section>
+
+            <section>
+                <h2>一、 核心衝突：信任崩解</h2>
+                <p>面對詐欺案件暴增，檢察官與律師對於「辯護權」與「洩密」的界線產生巨大分歧：</p>
+                <ul>
+                    <li><strong>檢方立場：</strong> 懷疑律師成為詐騙集團共犯，透過「陪偵」或「律見」協助集團串證與監控車手，必須嚴辦以汰除害群之馬。</li>
+                    <li><strong>律師立場：</strong> 擔憂檢方擴權與濫訴，將正常辯護行為貼上「詐團軍師」標籤，嚴重損害辯護人維護正當法律程序的職責。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>二、 數據會說話：起訴案件激增</h2>
+                <div class="highlight-box">
+                    <strong>律師涉犯洩密罪起訴案件數對比：</strong>
+                    <ul>
+                        <li>2006年 - 2017年 (約10年間)：僅 <strong>7件</strong>。</li>
+                        <li>2017年 - 2025年 (修法後約8年間)：激增至 <strong>38件</strong>。</li>
+                        <li>案件性質：近期案件中，<strong>52.6%</strong> 與詐欺、組織犯罪、洗錢有關。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>三、 檢方眼中的「洩密型態」</h2>
+                <p>檢方指出，詐騙集團為了規避風險，發展出「集團式派案」模式，利用律師進行非法勾當，主要分為兩類：</p>
+                
+                <h3>1. 通靈洩密型（常見於偵查初期）</h3>
+                <ul>
+                    <li><strong>目的：</strong> 監控底層成員（如車手），確保其不供出上游，而非真心為其辯護。</li>
+                    <li><strong>手法：</strong> 車手一被抓，集團配合的律師立即到場。律師往往受集團幹部委任，而非被告家屬。</li>
+                </ul>
+
+                <h3>2. 律見串證型（常見於羈押期間）</h3>
+                <ul>
+                    <li><strong>目的：</strong> 在同案共犯皆被羈押時，串通彼此證詞，避免出現破口。</li>
+                    <li><strong>手法：</strong> 利用律師接見（律見）機會，傳遞偵查進度與共犯供述。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>四、 律師界的困境與反擊</h2>
+                <p>面對檢方強勢偵辦，律師界產生了寒蟬效應，導致「防禦性辯護」現象興起，最終可能損害被告權益。</p>
+                
+                <h3>1. 寒蟬效應與標籤化</h3>
+                <ul>
+                    <li>律師擔心接辦詐欺案會被輕易貼上「共犯」標籤，面臨極高執業風險。</li>
+                    <li>許多律師選擇<strong>拒接刑案</strong>，或在偵查中<strong>消極辯護</strong>（如不敢閱卷、不敢查證事實）。</li>
+                </ul>
+
+                <h3>2. 實質辯護權受損</h3>
+                <ul>
+                    <li><strong>查證困境：</strong> 律師為了辯護需要向外查證（例如核實公司財報），卻可能被檢方視為洩漏偵查機密。</li>
+                    <li><strong>資訊不對等：</strong> 律師質疑檢方濫用「偵查不公開」，連被告是否被羈押等基本資訊都視為機密，阻礙律師與家屬溝通。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>五、 結論與省思</h2>
+                <p>詐欺案海嘯帶來的副作用，已使檢辯關係從「對抗」走向「敵對」。若律師因恐懼而不敢實質辯護，將導致司法天秤傾斜，甚至使無辜者被體制排除。如何在<strong>「打擊犯罪」</strong>與<strong>「保障人權（辯護權）」</strong>之間重新劃定紅線，是目前司法制度急需解決的課題。</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>本頁面為文章內容重點整理，原始文章版權歸 <strong>報導者 The Reporter</strong> 所有。</p>
+        </footer>
+    </div>
+
+</body>
+</html>
