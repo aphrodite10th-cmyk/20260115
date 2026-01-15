@@ -1,84 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Springer Link Chapter Page</title>
+    <title>檢察官出走、律師成共犯 詐欺案海嘯，如何侵蝕司法防線？ - 報導者 The Reporter</title>
     <style>
+        /* 基礎樣式設定，模擬簡潔的新聞專題頁面 */
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #262626;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
+
         .container {
-            max-width: 960px;
-            margin: 20px auto;
+            max-width: 800px;
+            margin: 0 auto;
             background: #fff;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
+
+        /* Header 區域 */
         header {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+            background-color: #000;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
         .logo {
             font-weight: bold;
-            font-size: 24px;
-            color: #eb2c08; /* Springer Orange */
+            font-size: 1.2rem;
+            letter-spacing: 1px;
         }
-        .article-header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            color: #222;
+
+        /* 專題主視覺與標題區 */
+        .hero-section {
+            background-color: #222;
+            color: #fff;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
         }
-        .authors {
-            margin-bottom: 20px;
-            color: #005580;
-        }
-        .author-name {
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .affiliations {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .abstract-section {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-left: 4px solid #eb2c08;
-            margin-bottom: 30px;
-        }
-        .abstract-title {
-            font-weight: bold;
-            font-size: 1.2em;
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: #ccc;
             margin-bottom: 10px;
             display: block;
         }
-        .keywords {
-            margin-top: 15px;
-            font-size: 0.9em;
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            line-height: 1.3;
         }
-        .keyword-label {
-            font-weight: bold;
-        }
-        .copyright {
-            font-size: 0.8em;
+
+        .hero-meta {
+            font-size: 0.85rem;
             color: #888;
-            margin-top: 50px;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
+            margin-bottom: 30px;
         }
-        .bibliographic-info {
-            margin-top: 20px;
-            font-size: 0.9em;
-            background: #eef7fc;
+
+        /* 簡介文字區 */
+        .intro-section {
+            padding: 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* 製作團隊名單 */
+        .credits {
+            font-size: 0.9rem;
+            color: #666;
+            background: #f9f9f9;
             padding: 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+        
+        .credits span {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        /* 文章列表區 */
+        .article-list {
+            padding: 40px;
+        }
+
+        .article-card {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        .article-card:last-child {
+            border-bottom: none;
+        }
+
+        .article-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #000;
+            text-decoration: none;
+            display: block;
+        }
+
+        .article-title:hover {
+            color: #c71b0a; /* 報導者紅 */
+        }
+
+        .article-summary {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .article-date {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* 頁尾 */
+        footer {
+            background-color: #000;
+            color: #666;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+        
+        /* 響應式調整 */
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .container {
+                width: 100%;
+            }
+            .intro-section, .article-list {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -86,51 +165,67 @@
 
     <div class="container">
         <header>
-            <div class="logo">Springer Link</div>
+            <div class="logo">The Reporter 報導者</div>
+            <div>深度專題</div>
         </header>
 
-        <main>
-            <article class="article-header">
-                <h1>[Insert Chapter Title Here]</h1>
-                
-                <div class="authors">
-                    <span class="author-name">[Author Name 1]</span>, 
-                    <span class="author-name">[Author Name 2]</span>,
-                    <span class="author-name">[Author Name 3]</span>
-                </div>
+        <section class="hero-section">
+            <span class="hero-subtitle">蔓延的詐騙案如何使司法防線面臨潰堤</span>
+            <h1 class="hero-title">檢察官出走、律師成共犯<br>詐欺案海嘯，如何侵蝕司法防線？</h1>
+            <div class="hero-meta">2025.12.28 最後更新</div>
+        </section>
 
-                <div class="affiliations">
-                    <p>1. [Affiliation 1, University/Institute Name]</p>
-                    <p>2. [Affiliation 2, University/Institute Name]</p>
-                </div>
+        <section class="intro-section">
+            <p class="intro-text">
+                全國詐騙案頻傳已非新聞，縱使政府多次宣示打詐決心，推出「打詐四法」，但是受害人數及詐欺財損仍維持在高峰，猶如燎原野火不斷蔓延。如今這把火更燒到維護社會運作的底線：司法。
+            </p>
+            <p class="intro-text">
+                曾經以打擊犯罪、為社會主持正義為榮的檢察官，在詐騙案洪流中沒頂，淪為結案生產線上的螺絲釘，紛紛高掛紫色法袍出走；被賦予維護人權使命的律師，則因為少數跨越職業倫理的同業，使白袍蒙上「詐團共犯」陰影，檢方不停大動作偵辦律師洩密案⋯⋯集團化的詐騙犯罪除了威脅民眾身家財產，更徹底顛覆公權力的秩序與結構。
+            </p>
+            <p class="intro-text">
+                身處一線的檢察官們怎麼自處？檢辯雙方如何面對刑事訴訟運作的衝擊？不同角色的矛盾背後，有什麼制度性缺漏需要刻不容緩補上？詐騙暴增帶來的大量副作用，正快速發酵。
+            </p>
 
-                <section class="abstract-section">
-                    <span class="abstract-title">Abstract</span>
-                    <p>
-                        [Paste the abstract content here. This chapter discusses...]
-                    </p>
+            <div class="credits">
+                <span><strong>監製：</strong>張子午</span>
+                <span><strong>文字：</strong>孔德廉</span>
+                <span><strong>封面攝影與設計：</strong>楊子磊、江世民</span>
+                <span><strong>編輯：</strong>黃鈺婷、張詩芸</span>
+                <span><strong>社群企劃：</strong>陳思樺、林彥伶</span>
+            </div>
+        </section>
 
-                    <div class="keywords">
-                        <span class="keyword-label">Keywords:</span>
-                        [Keyword 1] - [Keyword 2] - [Keyword 3]
-                    </div>
-                </section>
+        <section class="article-list">
+            
+            <article class="article-card">
+                <a href="#" class="article-title">當法律守門人墮入共犯結構──不肖律師如何遊走灰色地帶，成詐團廉價工具</a>
+                <p class="article-summary">
+                    近來不斷有律師因涉及替犯罪集團洩密被檢方起訴，其中案件大量發生在2017年保障偵查中辯護權的修法之後。詐騙案爆發，加上律師生態、職業倫理與懲戒制度的不足，使部分法律人迷失方向。
+                </p>
+                <div class="article-date">2025.12.28</div>
             </article>
 
-            <aside class="bibliographic-info">
-                <h3>Cite this paper as:</h3>
-                <p>
-                    [Author Name] ([Year]) [Chapter Title]. In: [Editor Names] (eds) [Book Title]. 
-                    Lecture Notes in Computer Science, vol [Volume Number]. Springer, Cham. 
-                    https://doi.org/10.1007/978-3-030-80803-7_11
+            <article class="article-card">
+                <a href="#" class="article-title">是律師洩密或檢方浮濫偵辦破壞辯護權？詐欺爆發下，檢辯的洩密紅線之爭</a>
+                <p class="article-summary">
+                    律師界擔憂，檢方偵辦界線變得寬鬆，會讓律師們輕易被印上「詐團共犯」、「詐團軍師」等標籤與汙名，嚴重損及辯護人維護正當法律程序的職責。檢辯雙方該如何面對詐騙案件帶來的衝擊與信任危機？
                 </p>
-                <p><strong>DOI:</strong> 10.1007/978-3-030-80803-7_11</p>
-                <p><strong>Print ISBN:</strong> 978-3-030-80803-7</p>
-            </aside>
-        </main>
+                <div class="article-date">2025.12.28</div>
+            </article>
 
-        <footer class="copyright">
-            &copy; 2021 Springer Nature Switzerland AG. Part of Springer Nature.
+            <article class="article-card">
+                <a href="#" class="article-title">從熱血檢察官到僵化結案機器──巨量詐騙案衝擊，新北地檢署爆發離職潮</a>
+                <p class="article-summary">
+                    近5年大量激增的司法案件中，詐欺暴增帶來的大量副作用怎麼影響台灣司法體系？身處一線的司法官們如何自處，其中不少人又為何選擇拋下鐵飯碗？揭開基層檢察官面臨的真實困境。
+                </p>
+                <div class="article-date">2025.12.28</div>
+            </article>
+
+        </section>
+
+        <footer>
+            <p>Copyright © 2026 The Reporter.</p>
+            <p>本頁面為內容重製示範，非報導者官方網頁。</p>
         </footer>
     </div>
 
